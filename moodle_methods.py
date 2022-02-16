@@ -1,6 +1,5 @@
 import sys
 import datetime
-import pytest
 import moodle_locators as locators
 from time import sleep
 from selenium import webdriver
