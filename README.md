@@ -130,12 +130,11 @@ cat /home/ubuntu/.ssh/id_rsa.pub
 ```
 
 ### General Moodle Selenium Script
-####Setup a proper path, I call my virtualenv dir "venv" and
-####I've got the virtualenv command installed in /usr/local/bin
+Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtualenv command installed in /usr/local/bin
 ```
 PATH=${PATH}:/usr/local/bin
 if [ ! -d "venv" ]; then
-        virtualenv venv
+        virtualenv venvss
 fi
 . venv/bin/activate
 pip3 install faker
