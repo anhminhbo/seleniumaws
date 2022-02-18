@@ -134,7 +134,7 @@ Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtuale
 ```
 PATH=${PATH}:/usr/local/bin
 if [ ! -d "venv" ]; then
-        virtualenv venvss
+        virtualenv venv
 fi
 . venv/bin/activate
 pip3 install faker
