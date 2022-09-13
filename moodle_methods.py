@@ -54,7 +54,9 @@ def tearDown():
 # Check if text Database connection error appear
 def checkDatabaseErrorAppear():
     try:
-        driver.find_element(By.CLASS_NAME, 'error-content')
+        content = driver.find_element(By.CLASS_NAME, 'error-content')
+        if content:
+            raise Exception("Database connection error, please check your code again DEVs.")
     except NoSuchElementException:
         print(f'Successfully, Database connection error not occur. Enjoy viewing the website.')
         driver.close()
