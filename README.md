@@ -49,16 +49,6 @@ sudo apt-get install jenkins
 cat /var/lib/jenkins/config.xml
 ```
 
-### Check Jenkins status (should be green and Active)
-```
-sudo systemctl status jenkins
-```
-
-### If Jenkins status is Inactive
-```
-sudo systemctl start jenkins
-sudo systemctl status jenkins
-```
 ### Check Python3 version
 ```
 python3 —-version
@@ -86,14 +76,6 @@ sudo pip3 install virtualenv
 virtualenv --version
 ```
 
-### Open a Firewall for Jenkins connections (optional)
-```
-sudo ufw allow 8080
-sudo ufw status
-sudo ufw allow OpenSSH
-sudo ufw enable
-```
-
 ### Unlock Jenkins (copy and paste an Admin Password)
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -118,7 +100,7 @@ fi
 pip3 install faker
 pip3 install selenium
 pip3 install pytest
-cd /var/lib/jenkins/workspace/PythonSeleniumMoodle/
-python3 -m unittest discover --pattern=moodle_tests.py
+cd /var/lib/jenkins/workspace/PerformWebUiTestIfFailedEmailOrPassedProceed/
+python3 -m unittest discover --pattern=rmit_store_tests.py
 deactivate
 ```
