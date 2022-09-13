@@ -52,6 +52,6 @@ def tearDown():
         driver.quit()
 
 # Check if text Database connection error appear
-def checkDatabase():
-    driver.find_element(By.CLASS_NAME, 'error-content')
+def checkDatabaseErrorAppear():
+    driver.find_element(By.CLASS_NAME, 'col-md-3 col-sm-5 product-content')
     
