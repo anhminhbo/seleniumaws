@@ -30,9 +30,9 @@ def setUp():
     driver.maximize_window()
 
     # Let's wait for the browser response in general
-    driver.implicitly_wait(30)
+    driver.implicitly_wait(15)
 
-    # Navigating to the Moodle app website
+    # Navigating to the RMIT Store app website
     driver.get(locators.moodle_url)
 
     # Checking that we're on the correct URL address and we're seeing correct title
@@ -59,8 +59,9 @@ def checkDatabaseErrorAppear():
         content = driver.find_element(By.CLASS_NAME, 'error-content')
         if content:
             print(f'Unsuccessfully, Database connection error occurs. Please check your code again DEVs.')
+            driver.close()
+            driver.quit()
             raise Exception("Database connection error, please check your code again DEVs.")
     except NoSuchElementException:
         print(f'Successfully, Database connection error not occur. Enjoy viewing the website.')
-        driver.close()
-        driver.quit()
+        pass
