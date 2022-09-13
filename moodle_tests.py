@@ -18,5 +18,5 @@ class MoodleAppPositiveTestCases(unittest.TestCase):
 #         methods.delete_test_user()
 #         methods.log_out()
         methods.setUp()
-        methods.checkDatabase()
+        methods.checkDatabaseErrorAppear()
         methods.tearDown()
