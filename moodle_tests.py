@@ -6,7 +6,7 @@ import moodle_locators as locators
 class MoodleAppPositiveTestCases(unittest.TestCase):
 
     @staticmethod
-    def test_create_new_user():
+    def test_database_connection():
 #         methods.log_in(locators.moodle_username, locators.moodle_password)
 #         methods.create_new_user()
 #         methods.check_user_created()
