@@ -50,14 +50,6 @@ def tearDown():
         print(f'Test Completed at: {datetime.datetime.now()}')
         driver.close()
         driver.quit()
-        # Make a log file with dynamic fake values
-        old_instance = sys.stdout
-        log_file = open('message.log', 'w')
-        sys.stdout = log_file
-        print(f'Email: {locators.email}\nUsername: {locators.new_username}\nPassword: {locators.new_password}\n'
-              f'Full Name: {locators.full_name}')
-        sys.stdout = old_instance
-        log_file.close()
 
 # # Check if text Database connection error appear
 # def checkDatabase():
