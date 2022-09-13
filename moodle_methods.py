@@ -31,14 +31,14 @@ def setUp():
     driver.implicitly_wait(30)
 
     # Navigating to the Moodle app website
-    driver.get('https://www.google.com/')
+    driver.get(locators.moodle_url)
 
     # Checking that we're on the correct URL address and we're seeing correct title
-    if driver.title == 'Google':
-        print(f'We\'re at Moodle homepage -- {driver.current_url}')
-        print(f'We\'re seeing title message -- "Software Quality Assurance Testing"')
+    if driver.title == 'RMIT Store':
+        print(f'We\'re at RMIT Store homepage -- {driver.current_url}')
+        print(f'We\'re seeing title message -- "RMIT Store"')
     else:
-        print(f'We\'re not at the Moodle homepage. Check your code!')
+        print(f'We\'re not at the RMIT Store homepage. Check your code!')
         driver.close()
         driver.quit()
 
@@ -58,35 +58,6 @@ def tearDown():
               f'Full Name: {locators.full_name}')
         sys.stdout = old_instance
         log_file.close()
-
-
-# Log In method with custom (dynamic) username and password
-def log_in(username, password):
-    if driver.current_url == locators.moodle_url:
-        driver.find_element(By.LINK_TEXT, 'Log in').click()
-        if driver.current_url == locators.moodle_login_url:
-            driver.find_element(By.ID, 'username').send_keys(username)
-            sleep(0.25)
-            driver.find_element(By.ID, 'password').send_keys(password)
-            sleep(0.25)
-            driver.find_element(By.ID, 'loginbtn').click()
-            if driver.title == 'Dashboard' and driver.current_url == locators.moodle_dashboard_url:
-                assert driver.current_url == locators.moodle_dashboard_url
-                print(f'Log in successfully. Dashboard is present. \n'
-                      f'We logged in with Username: {username} and Password: {password}')
-            else:
-                print(f'We\re not at the Dashboard. Try again')
-
-
-# Log out method to log out from the Moodle app
-def log_out():
-    driver.find_element(By.CLASS_NAME, 'userpicture').click()
-    sleep(0.25)
-    driver.find_element(By.XPATH, '//span[contains(., "Log out")]').click()
-    sleep(0.25)
-    if driver.current_url == locators.moodle_url:
-        print(f'Log out successfully at: {datetime.datetime.now()}')
-
 
 # # Check if text Database connection error appear
 # def checkDatabase():
