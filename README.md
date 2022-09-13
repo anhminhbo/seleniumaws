@@ -107,27 +107,6 @@ sudo apt-get update
 sudo apt-get install git -y
 ```
 
-### Open Jenkins —> go to Manage Plugins (check the availability)
-```
-Credentials Plugin 
-Git plugin
-```
-
-### Make Jenkins & Git integration (using Terminal or CMD)
-```
-ssh-keygen
-```
-
-### Add Private key to the Jenkins GIT Credentials
-```
-cat /home/ubuntu/.ssh/id_rsa 
-```
-
-### Add Public key to the GitHub Deploy Keys
-```
-cat /home/ubuntu/.ssh/id_rsa.pub
-```
-
 ### General Moodle Selenium Script
 Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtualenv command installed in /usr/local/bin
 ```
