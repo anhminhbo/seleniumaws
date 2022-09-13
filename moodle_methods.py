@@ -34,7 +34,7 @@ def setUp():
     driver.get('https://www.google.com/')
 
     # Checking that we're on the correct URL address and we're seeing correct title
-    if driver.current_url == locators.moodle_url and driver.title == 'Google':
+    if driver.title == 'Google':
         print(f'We\'re at Moodle homepage -- {driver.current_url}')
         print(f'We\'re seeing title message -- "Software Quality Assurance Testing"')
     else:
