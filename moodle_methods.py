@@ -56,6 +56,7 @@ def checkDatabaseErrorAppear():
     try:
         content = driver.find_element(By.CLASS_NAME, 'error-content')
         if content:
+            print(f'Unsuccessfully, Database connection error occurs. Please check your code again DEVs.')
             raise Exception("Database connection error, please check your code again DEVs.")
     except NoSuchElementException:
         print(f'Successfully, Database connection error not occur. Enjoy viewing the website.')
