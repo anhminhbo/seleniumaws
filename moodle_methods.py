@@ -53,5 +53,5 @@ def tearDown():
 
 # Check if text Database connection error appear
 def checkDatabaseErrorAppear():
-    driver.find_element(By.CLASS_NAME, 'col-md-3 col-sm-5 product-content')
+    driver.find_element(By.CLASS_NAME, 'product-content')
     
