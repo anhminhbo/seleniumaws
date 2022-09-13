@@ -33,7 +33,7 @@ def setUp():
     driver.implicitly_wait(15)
 
     # Navigating to the RMIT Store app website
-    driver.get(locators.moodle_url)
+    driver.get(locators.rmit_store_url)
 
     # Checking that we're on the correct URL address and we're seeing correct title
     if driver.title == 'RMIT Store':
