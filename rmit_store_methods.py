@@ -32,15 +32,15 @@ def setUp():
     # Let's wait for the browser response in general
     driver.implicitly_wait(15)
 
-    # Navigating to the RMIT Store app website
+    # Navigating to the RMIT Store Development app website
     driver.get(locators.rmit_store_dev_url)
 
     # Checking that we're on the correct URL address and we're seeing correct title
     if driver.title == 'RMIT Store':
-        print(f'We\'re at RMIT Store homepage -- {driver.current_url}')
+        print(f'We\'re at RMIT Store Development homepage -- {driver.current_url}')
         print(f'We\'re seeing title message -- "RMIT Store"')
     else:
-        print(f'We\'re not at the RMIT Store homepage. Check your code!')
+        print(f'We\'re not at the RMIT Store Development homepage. Check your code!')
         driver.close()
         driver.quit()
 
@@ -63,5 +63,5 @@ def checkDatabaseErrorAppear():
             driver.quit()
             raise Exception("Database connection error, please check your code again DEVs.")
     except NoSuchElementException:
-        print(f'Successfully, Database connection error not occur. Enjoy viewing the website.')
+        print(f'Successfully, Database connection error not occur. Proceed to deploy the website to Production Server.')
         pass
