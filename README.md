@@ -32,7 +32,6 @@ chromedriver – version
 sudo apt update
 sudo apt search openjdk
 sudo apt install openjdk-11-jdk
-sudo apt install openjdk-11-jdk
 java -version
 ```
 
@@ -62,7 +61,7 @@ sudo systemctl status jenkins
 ```
 ### Check Python3 version
 ```
-python3 —version
+python3 —-version
 ```
 
 ### If Python3 is not installed
