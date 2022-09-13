@@ -63,5 +63,5 @@ def checkDatabaseErrorAppear():
             driver.quit()
             raise Exception("Database connection error, please check your code again DEVs.")
     except NoSuchElementException:
-        print(f'Successfully, Database connection error not occur. Proceed to deploy the website to Production Server.')
+        print(f'Successfully, Database connection error not occur. Proceed to deploy the website to Production Server at {locators.rmit_store_prod_url}.')
         pass
