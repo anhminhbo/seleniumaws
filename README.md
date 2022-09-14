@@ -24,7 +24,7 @@ sudo apt-get install unzip
 sudo apt-get update
 sudo unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/bin/chromedriver
-chromedriver – version
+chromedriver –version
 ```
 
 ### Install Java 11 (will be used by Jenkins)
@@ -51,7 +51,7 @@ cat /var/lib/jenkins/config.xml
 
 ### Check Python3 version
 ```
-python3 —-version
+python3 version
 ```
 
 ### If Python3 is not installed
@@ -61,7 +61,7 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.9
-python3 --version
+python3 version
 ```
 
 ### Install pip3 package manager
