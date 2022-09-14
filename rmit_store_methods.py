@@ -30,7 +30,7 @@ def setUp():
     driver.maximize_window()
 
     # Let's wait for the browser response in general
-    driver.implicitly_wait(15)
+    driver.implicitly_wait(60)
 
     # Navigating to the RMIT Store Development app website
     driver.get(locators.rmit_store_dev_url)
